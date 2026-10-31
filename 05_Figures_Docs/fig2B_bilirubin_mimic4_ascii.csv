@@ -1,0 +1,9 @@
+window_mid,group,n,median,q1,q3
+6.0,Culture-positive,69,2.7,2.3,3.3
+18.0,Culture-positive,56,3.8,3.3,4.9
+30.0,Culture-positive,53,5.7,4.8,7.1
+42.0,Culture-positive,21,8.7,6.3,9.3
+6.0,No infection,66,4.25,2.425,8.2
+18.0,No infection,81,5.0,4.1,6.6
+30.0,No infection,529,6.3,5.2,7.4
+42.0,No infection,1553,7.2,5.8,8.5

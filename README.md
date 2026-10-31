@@ -25,7 +25,7 @@ table that maps each number in the manuscript to the script and result file that
 | `02_Colocalization` | 5 Python, 5 R | Regional data and LD matrices; `coloc.abf` with allele harmonisation and dual windows; SuSiE-based colocalisation |
 | `03_Mechanism_GEO` | 14 Python | Search, download, verification and analysis of the human hepatocyte transcriptomic series, including circadian and replication analyses |
 | `04_Clinical_MIMIC` | 11 Python | Cohort construction from the local MIMIC databases; bilirubin and phototherapy models; erythrocyte-index models with transfusion adjustment; transfusion adjustment for the within-subject bilirubin outcome; APR-DRG severity-of-illness sensitivity analysis; manuscript tables |
-| `05_Figures_Docs` | 2 Python, 1 R | Figure data preparation, all six manuscript figures, and the Markdown-to-Word converter |
+| `05_Figures_Docs` | 2 Python, 2 R, 7 CSV | Figure data preparation, all six manuscript figures, the plotting input data for Figures 2-5, and the Markdown-to-Word converter |
 
 ### Superseded and exploratory scripts
 

@@ -178,14 +178,15 @@
 
 ---
 
-## Group 5: `05_Figures_Docs` (4)
+## Group 5: `05_Figures_Docs` (11)
 
 | Script | Function |
 |---|---|
 | `20261009_figure_data_prep.py` | Figure data preparation (aggregate the result tables into one CSV per figure per panel; includes the dose-response recomputed by querying MIMIC again) |
 | `20261009_manuscript_figures.R` | * **Figure 1-6 plotting**: 17 cm wide, each figure output as PDF (vector) + PNG 300 dpi + TIFF 600 dpi. **Pure-ASCII source code**, with label mapping done on the Python side |
 | `20261009_md2docx_generic.py` | Markdown -> Word (generic version), **renders `[TBD: ...]` in bold red** to make gaps easy to locate; outputs the paragraph count / table count / number of TBD spots. **New switch `--numbered`**: centered Arabic page numbers in the footer (PAGE field) + continuous line numbers in the body (`w:lnNumType`, inserted per the OOXML schema after `pgMar` and before `cols`). The manuscript was generated with this switch: <br>`md2docx_generic.py <manuscript.md> <manuscript.docx> --numbered` |
-| **`20261024_figure3_with_CoNS.R`** (new) | * **Fig. 3a redrawn with the CoNS-only exposure as a third group**: identical to `20261009_manuscript_figures.R` except for one extra factor level and one extra colour (`#4D4D4D`). Run as `Rscript 20261024_figure3_with_CoNS.R <figdata dir> <out dir>`; emits 17 x 19 cm PDF plus 600 dpi LZW TIFF | Reads `fig3A_iron_forest_ascii.csv`, the **only data file kept in the repository** (4.5 KB): the four CoNS-only rows are produced by the two `20261024_*` scripts rather than by `20261009_figure_data_prep.py`, so the figure is not reproducible from the database alone |
+| **`20261024_figure3_with_CoNS.R`** (new) | * **Fig. 3a redrawn with the CoNS-only exposure as a third group**: identical to `20261009_manuscript_figures.R` except for one extra factor level and one extra colour (`#4D4D4D`). Run as `Rscript 20261024_figure3_with_CoNS.R <figdata dir> <out dir>`; emits 17 x 19 cm PDF plus 600 dpi LZW TIFF | Reads `fig3A_iron_forest_ascii.csv`; the four CoNS-only rows are produced by the two `20261024_*` scripts rather than by `20261009_figure_data_prep.py` |
+| **Figure input data, 7 CSV** (new) | * **Plotting input for Figures 2-5**, exported as pure-ASCII, BOM-free copies so the R scripts run under any locale: `fig2A_bilirubin_mimic3_ascii.csv`, `fig2B_bilirubin_mimic4_ascii.csv`, `fig3A_iron_forest_ascii.csv`, `fig3B_iron_dose_ascii.csv`, `fig4A_genetic_forest_ascii.csv`, `fig4B_hamp_locus_ascii.csv`, `fig5_hepatocyte_ascii.csv` | With these seven files, `fig2(); fig3(); fig4(); fig5()` in `20261009_manuscript_figures.R` (plus `20261024_figure3_with_CoNS.R` for Fig. 3) regenerates the published Figures 2-5 **object for object** - identical drawing geometry and identical text on every panel. `fig5_hepatocyte_ascii.csv` also carries the GSE202045 arms for CYP3A4, CYP1A2, ALB and NR1D1 (`log2FC` = mean CPM at 24 h IL-6 minus control), which the original 93-gene panel did not include and which therefore appeared as blank cells in earlier drafts of Fig. 5 |
 
 ---
 
