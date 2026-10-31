@@ -90,8 +90,8 @@ fig1 <- function() {
                                      arrow = arrow(length = unit(0.12, "cm")), linewidth = LW, colour = "grey45")
   p <- ggplot() + xlim(0, 100) + ylim(0, 64) +
     annotate("text", x = 50, y = 62, size = 3.4, fontface = "bold", label = "Triangulation of three evidence layers") +
-    box(1.5, 46, 30, 12, "Clinical", "MIMIC-IV: 17,244 NICU/SCN admissions\nMIMIC-III: 7940 NICU admissions\n8255 blood-culture episodes", "#D6E4F0") +
-    box(35, 46, 30, 12, "Genetic", "FinnGen R12: 5 neonatal endpoints\n15 quantitative lab traits (n 5055-447,271)\nitalic(cis)*'-pQTL: IL6R, SAA1/SAA2, CRP'", "#E6DED1", sub_parse = c(FALSE, FALSE, TRUE)) +
+    box(1.5, 46, 30, 12, "Clinical", "MIMIC-IV: 17,244 NICU/SCN admissions\nMIMIC-III: 7,940 NICU admissions\n8,255 blood-culture episodes", "#D6E4F0") +
+    box(35, 46, 30, 12, "Genetic", "FinnGen R12: 5 neonatal endpoints\n15 quantitative lab traits (n 5,055-447,271)\nitalic(cis)*'-pQTL: IL6R, SAA1/SAA2, CRP'", "#E6DED1", sub_parse = c(FALSE, FALSE, TRUE)) +
     box(68.5, 46, 30, 12, "Transcriptomic", "6 human hepatocyte systems (GEO)\nIL-6 / LPS / BMAL1 knockdown\n93 genes across five GEO datasets", "#DCEBDC") +
     ar(16.5, 45.7, 40) + ar(50, 45.7, 40) + ar(83.5, 45.7, 40) +
     box(1.5, 28, 30, 11.5, "1. Clinical question", "Does culture-proven infection\nlower bilirubin, and lower MCV /\nMCH (iron-restricted erythropoiesis)?", "#F4F8FC") +
@@ -101,7 +101,7 @@ fig1 <- function() {
     annotate("text", x = 50, y = 18.4, size = 2.45, label = "IL-6 up  ->  hepatic UGT1A1 down   (would raise bilirubin)") +
     annotate("text", x = 50, y = 14.9, size = 2.45, label = "IL-6 up  ->  hepcidin (HAMP) up  ->  iron restriction  ->  less erythropoietic haem turnover   (would lower bilirubin)") +
     annotate("text", x = 50, y = 10.1, size = 3.0, fontface = "bold", colour = "#8C1D18",
-             label = "bold('Net effect ')*bolditalic('in vivo')*bold(': the erythropoietic arm predominates  ->  bilirubin falls')", parse = TRUE) +
+             label = "bold('Net effect ')*bolditalic('in vivo')*bold(': the systemic arm appears to predominate  ->  bilirubin falls')", parse = TRUE) +
     annotate("text", x = 50, y = 5.8, size = 2.3, colour = "grey25",
              label = "Clinical, genetic and HAMP-locus evidence are concordant; the hepatocyte data reveal the opposing hepatic arm.") +
     annotate("text", x = 50, y = 2.8, size = 2.3, colour = "grey40",

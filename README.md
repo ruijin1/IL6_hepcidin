@@ -5,7 +5,7 @@ Code accompanying the manuscript:
 > **Culture-proven infection is associated with lower total serum bilirubin in neonates: concordant clinical, genetic and transcriptomic evidence for opposing hepatic and systemic arms of IL-6 signalling**
 > Rui Jin, Yaozhi Qi, Xingyu Zhang, Shouhong Yang, Yang Ren and Yan Gao
 
-This repository holds 57 scripts (50 Python, 7 R) that reproduce every number, table and figure
+This repository holds 58 scripts (51 Python, 7 R) that reproduce every number, table and figure
 reported in the manuscript, across three evidence layers: two neonatal clinical cohorts
 (MIMIC-IV v1.0 and MIMIC-III v1.4), genetic analyses (Mendelian randomisation and colocalisation
 for IL6R and the HAMP locus), and human hepatocyte transcriptomes from GEO.
